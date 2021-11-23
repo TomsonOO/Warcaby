@@ -8,6 +8,7 @@ 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 - tokenik
 
 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 - tokenik nr 2
 
+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 - tokenik nr 3
 
 Django settings for config project.
 
