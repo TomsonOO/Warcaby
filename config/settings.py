@@ -2,9 +2,12 @@
 mouse scrolling speed adjustment:
 gedit ~/.imwheelrc
 imwheel --kill --buttons "4 5"
-
+ssh -T git@github.com
 
 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 - tokenik
+
+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 - tokenik nr 2
+
 
 Django settings for config project.
 
