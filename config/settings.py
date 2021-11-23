@@ -32,7 +32,7 @@ SECRET_KEY = 'etpyu#ipjxyasiao$c+wbbp(cg)zal0&#7a3$x0&azu4f5!g2g'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
