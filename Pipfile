@@ -4,8 +4,13 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-django = "~=3.1.0"
-gunicorn = "*"
+Django = "==3.1.14"
+gunicorn = "==20.1.0"
+asgiref = "==3.4.1"
+newrelic = "==7.2.4.171"
+pytz = "==2021.3"
+sqlparse = "==0.4.2"
+whitenoise = "==5.3.0"
 
 [dev-packages]
 
