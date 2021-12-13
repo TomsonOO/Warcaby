@@ -9,6 +9,15 @@
         <a href="#"><button type="button" class="btn-lg btn-outline-success">Statistics</button></a>
     
         <a href="#"><button type="button" class="btn-lg btn-outline-success" >Settings</button></a>
+
     </div>
 
+    {% if user.is_authenticated %}
+        Hi {{ user.username }}!
+        <p><a href="{% url 'logout' %}">Log Out</a></p>
+    {% else %}
+        <p>You are not logged in</p>
+        <a href="{% url 'login' %}">Log In</a>
+        <a href="{% url 'signup' %}">Sign Up</a>
+    {% endif %}
 {% endblock content %}
