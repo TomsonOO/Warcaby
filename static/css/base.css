@@ -18,3 +18,9 @@ body {
     background-color: rgb(117, 156, 107);
     display: table-column;
 }
+.form-control{
+    width: 42%;
+    margin-left: auto;
+    margin-right: auto;    
+    text-align: center;
+}

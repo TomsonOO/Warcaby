@@ -1,5 +1,5 @@
 from django.apps import AppConfig
 
 
-class nakeConfig(AppConfig):
+class SnakeConfig(AppConfig):
     name = 'snake'
