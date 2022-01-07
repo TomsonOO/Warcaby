@@ -1,1 +1,1 @@
-#Snake
+Jednak Snake nie warcaby
