@@ -1,1 +1,1 @@
-Jednak Snake nie warcaby
+Jednak nie wiem co
