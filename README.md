@@ -1,2 +1,1 @@
-# Warcaby
-Warcaby, snake.
+#Snake
