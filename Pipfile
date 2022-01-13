@@ -11,8 +11,6 @@ newrelic = "==7.2.4.171"
 pytz = "==2021.3"
 sqlparse = "==0.4.2"
 whitenoise = "==5.3.0"
-crispy-bootstrap5 = "==0.6"
-django-crispy-forms = "==1.13.0"
 
 [dev-packages]
 
