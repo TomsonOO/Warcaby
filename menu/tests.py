@@ -3,8 +3,6 @@ from django.contrib.auth import get_user_model
 from django.urls import reverse
 
 
-# Create your tests here.
-
 class HomePageTests(SimpleTestCase):
 
     def test_home_page_status_code(self):
