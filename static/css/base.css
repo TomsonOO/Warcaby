@@ -1,26 +1,4 @@
 body {
-    text-align: center;
-    color: black;
-    background-color: rgb(136, 173, 128);
-
+  background-color: red;
 }
-
-.nav{
-    text-align: center;
-    color: blue;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.btn-lg, btn-outline-success {
-    padding: 60px 120px;
-    font-size: 64px;
-    background-color: rgb(117, 156, 107);
-    display: table-column;
-}
-.form-control{
-    width: 42%;
-    margin-left: auto;
-    margin-right: auto;    
-    text-align: center;
-}
+/*# sourceMappingURL=base.css.map */
