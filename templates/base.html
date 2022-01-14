@@ -12,8 +12,23 @@
     <title>Snake</title>
   </head>
   <body>
-    <h1>Snake</h1>
-
+    <header class="p-3 bg-dark t ext-white">
+      <div class="text-end">
+        <div class="nav">
+          <h1>Snake</h1>
+        </div>
+        <div class="nav">
+          {% if user.is_authenticated %}
+            <h2>{{ user.username }}
+            <br /><br />
+            <a href="{% url 'logout' %}"><button  type="button" class="btn btn-info">Log Out</button></a></h2>
+          {% else %}
+              <a href="{% url 'login' %}" ><button type="button" class="btn btn-outline-light me-2">Login</button></a>
+              <a href="{% url 'signup' %}" ><button  type="button" class="btn btn-warning">Sign-up</button></a>
+          {% endif %}
+        </div>
+      </div>
+    </header>
   {% block content %}
   {% endblock content %}
 
