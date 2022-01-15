@@ -1,18 +1,20 @@
 {% extends 'base.html' %}
 {% block content %}
-
-    <div class="nav">      
-        <a href="{% url 'snake' %}"><button type="button" class="btn-lg btn-outline-success">Play</button></a>
+    <div class="menu">
+        <div class="d-grid gap-2 col-6 mx-auto mt-4">      
+            <a href="{% url 'snake' %}"><button type="button" class="btn-lg btn-outline-success">Play</button></a>
+        </div>
+        <div class="d-grid gap-2 col-6 mx-auto mt-4">
+            <a href="#"><button type="button" class="btn-lg btn-outline-success">Chat</button></a>
+        </div>
+        <div class="d-grid gap-2 col-6 mx-auto mt-4">
+            <a href="#"><button type="button" class="btn-lg btn-outline-success">Statistics</button></a>
+        </div>
+        <div class="d-grid gap-2 col-6 mx-auto mt-4">
+            <a href="#"><button type="button" class="btn-lg btn-outline-success" >Settings</button></a>
+        </div>
     </div>
-    <div class="nav"></div>
-        <a href="#"><button type="button" class="btn-lg btn-outline-success">Chat</button></a>
-    </div>
-    <div class="nav">
-        <a href="#"><button type="button" class="btn-lg btn-outline-success">Statistics</button></a>
     
-    </div>
-    <div class="nav">
-        <a href="#"><button type="button" class="btn-lg btn-outline-success" >Settings</button></a>
-    </div>
+
 
 {% endblock content %}
