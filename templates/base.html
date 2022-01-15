@@ -14,13 +14,12 @@
   <body>
     <header class="p-3 bg-dark t ext-white">
       <div class="text-end">
-        <div class="nav">
+        <div class="logo">
           <h1>Snake</h1>
         </div>
-        <div class="nav">
+        <div class="homeNav">
           {% if user.is_authenticated %}
             <h2>{{ user.username }}
-            <br /><br />
             <a href="{% url 'logout' %}"><button  type="button" class="btn btn-info">Log Out</button></a></h2>
           {% else %}
               <a href="{% url 'login' %}" ><button type="button" class="btn btn-outline-light me-2">Login</button></a>
