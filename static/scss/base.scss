@@ -1,13 +1,12 @@
 body {
     text-align: center;
-    color: black;
     background-color: rgb(136, 173, 128);
 }
 
-.text-end{
+.text-end{  
     height: 100px;
+    
 }
-
 
 .homeNav{
     text-align: right;
@@ -16,12 +15,16 @@ body {
 }
 
 .logo{ 
+    a{
+        text-decoration: none;
+        color: rgb(48, 98, 18);
+    }
     h1{
-        font-weight: bold;
+        font-weight: 800;
     }
     text-align: center;
     font-size: 72px;
-    color: rgb(48, 98, 18);
+
 }
 
 
@@ -31,6 +34,8 @@ body {
     padding: 20px;
     background-color: rgb(117, 156, 107);
     display: table-column;
+    font-weight: 400;
+
 }
 
 .form-control{
