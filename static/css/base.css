@@ -1,6 +1,5 @@
 body {
   text-align: center;
-  color: black;
   background-color: #88ad80;
 }
 
@@ -17,11 +16,15 @@ body {
 .logo {
   text-align: center;
   font-size: 72px;
+}
+
+.logo a {
+  text-decoration: none;
   color: #306212;
 }
 
 .logo h1 {
-  font-weight: bold;
+  font-weight: 800;
 }
 
 .btn-lg, btn-outline-success {
@@ -30,6 +33,7 @@ body {
   padding: 20px;
   background-color: #759c6b;
   display: table-column;
+  font-weight: 400;
 }
 
 .form-control {
