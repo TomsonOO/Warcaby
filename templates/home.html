@@ -11,10 +11,13 @@
             <a href="#"><button type="button" class="btn-lg btn-outline-success">Statistics</button></a>
         </div>
         <div class="d-grid gap-2 col-6 mx-auto mt-4">
-            <a href="#"><button type="button" class="btn-lg btn-outline-success" >Settings</button></a>
+            {% if user.pk %}
+                <a href="{% url 'settings' pk=user.pk %}"><button type="button" class="btn-lg btn-outline-success" >Settings</button></a>
+            {% else %}
+              <a href="{% url 'settings' pk=1 %}"><button type="button" class="btn-lg btn-outline-success" >Settings</button></a>
+            {% endif %}
         </div>
+
     </div>
     
-
-
 {% endblock content %}
