@@ -7,7 +7,6 @@ class CustomUserAdmin(UserAdmin):
     add_form = CustomUserCreationForm
     model = CustomUser
     list_display = [
-        "email",
         "username",
         "age",
         "is_staff",

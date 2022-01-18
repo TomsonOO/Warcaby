@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="settings">
+  {% if user.is_authenticated %}
+    <form action="" method="post">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <input type="submit" value="Save">
+    </form>
+  {% else %}
+    <h1>You must be signed in to change settings</h1>
+  {% endif %}
+</div>
+{% endblock content %}
+<!-- 
+    <div class="d-grid gap-2 col-6 mx-auto">
+        <button class="btn btn-light mt-4"  onclick="theme('light')" type="button">Light Mode</button>
+        <button class="btn btn-dark mt-4"   onclick="theme('dark')"  type="button">Night Mode</button>
+    </div> 
+        <label for="your_name">Theme: </label>
+        <input type="text" name="your_name" >
+        <input type="submit" value="OK">--> 
