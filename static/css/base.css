@@ -52,4 +52,10 @@ body {
 .settings h1 {
   color: #14290f;
 }
+
+.alert-secondary {
+  background-color: #759c6b;
+  color: #306212;
+  font-size: 36px;
+}
 /*# sourceMappingURL=base.css.map */

@@ -6,3 +6,7 @@ from django.views.generic import TemplateView
 
 class SnakeView(TemplateView):
     template_name = 'snake.html'
+
+
+class LogInRequired(TemplateView):
+    template_name = 'logIn_required.html'
