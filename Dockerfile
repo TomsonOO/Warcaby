@@ -23,4 +23,4 @@ RUN pip install --upgrade pip && pip install -r requirements.txt
 COPY . /app/
 
 # Specify the command to run on container start
-CMD ["gunicorn", "Projekt_IO.wsgi:application", "--bind", "0.0.0.0:8000"]
+CMD ["gunicorn", "Snake.wsgi:application", "--bind", "0.0.0.0:8000"]

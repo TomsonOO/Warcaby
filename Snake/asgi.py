@@ -1,5 +1,5 @@
 """
-ASGI config for Projekt_IO project.
+ASGI config for Snake project.
 
 It exposes the ASGI callable as a module-level variable named ``application``.
 
@@ -11,6 +11,6 @@ import os
 
 from django.core.asgi import get_asgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'Projekt_IO.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'Snake.settings')
 
 application = get_asgi_application()

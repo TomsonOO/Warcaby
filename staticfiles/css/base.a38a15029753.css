@@ -1,0 +1,61 @@
+body {
+  text-align: center;
+  background-color: #88ad80;
+}
+
+.text-end {
+  height: 100px;
+}
+
+.homeNav {
+  text-align: right;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.logo {
+  text-align: center;
+  font-size: 72px;
+}
+
+.logo a {
+  text-decoration: none;
+  color: #306212;
+}
+
+.logo h1 {
+  font-weight: 800;
+}
+
+.btn-lg, btn-outline-success {
+  width: 100%;
+  font-size: 64px;
+  padding: 20px;
+  background-color: #759c6b;
+  display: table-column;
+  font-weight: 400;
+}
+
+.form-control {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.menu a {
+  text-decoration: none;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
+.settings h1 {
+  color: #14290f;
+}
+
+.alert-secondary {
+  background-color: #759c6b;
+  color: #306212;
+  font-size: 36px;
+}
+/*# sourceMappingURL=base.css.map */
