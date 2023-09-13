@@ -1,5 +1,5 @@
-# Use an official Python runtime as the base image
-FROM python:3.8-slim
+# Use a specific Python runtime as the base image
+FROM python:3.8.12-slim
 
 # Set environment variables
 ENV PYTHONDONTWRITEBYTECODE 1
@@ -21,6 +21,10 @@ RUN pip install --upgrade pip && pip install -r requirements.txt
 
 # Copy the current directory contents into the container at /app
 COPY . /app/
+
+# Create a non-root user and switch to it
+RUN adduser --disabled-password --gecos '' appuser && chown -R appuser /app
+USER appuser
 
 # Specify the command to run on container start
 CMD ["gunicorn", "Snake.wsgi:application", "--bind", "0.0.0.0:8000"]
