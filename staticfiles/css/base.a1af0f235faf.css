@@ -1,6 +1,6 @@
 body {
   text-align: center;
-  background-color: #3f6237;
+  background-color: #88ad80;
 }
 
 .text-end {
@@ -38,22 +38,24 @@ body {
 
 .form-control {
   margin-left: auto;
+  margin-right: auto;
+  text-align: center;
 }
 
-.form-control .alert {
-  background-color: #759c6b;
-  color: #306212;
-  font-size: 36px;
-}
-
-.form-control .menu a {
+.menu a {
   text-decoration: none;
   margin-left: auto;
   margin-right: auto;
   width: 100%;
 }
 
-.form-control .settings h1 {
+.settings h1 {
   color: #14290f;
 }
-/*# sourceMappingURL=base_dark.css.map */
+
+.alert-secondary {
+  background-color: #759c6b;
+  color: #306212;
+  font-size: 36px;
+}
+/*# sourceMappingURL=base.css.0330ae0c2e32.map */

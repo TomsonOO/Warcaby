@@ -1,0 +1,69 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #3f6237;
+  text-align: center;
+}
+
+.canvas-container {
+  position: relative; /* Add this line */
+  background-color: #88ad80;
+  border: 2px solid #000;
+  display: inline-block;
+}
+
+#gameCanvas {
+  width: 40vw; /* 90% of the viewport width */
+  height: 40vw; /* keep it square */
+  max-width: 800px; /* optional: set a maximum size */
+  max-height: 800px; /* optional: set a maximum size */
+}
+
+button {
+  padding: 10px 15px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+button:hover {
+  background-color: #1e7e34;
+}
+
+.game-title {
+  font-size: 2.5em;
+  color: #28a745;
+  margin-bottom: 20px;
+}
+
+.game-instructions {
+  font-size: 1.2em;
+  margin-bottom: 15px;
+}
+
+.score-display {
+  font-size: 1.5em;
+  margin-top: 15px;
+}
+
+.food-eaten {
+  transform: scale(1.1);
+}
+
+#gameCanvas img {
+  transition: transform 0.1s linear, top 0.1s linear, left 0.1s linear;
+  position: relative;
+}
+
+#restartBtn {
+  position: absolute;
+  top: 50%; /* Position it at the middle of the canvas */
+  left: 50%; /* Center it horizontally */
+  transform: translate(-50%, 100px); /* Move it down by 100px from the middle */
+  font-size: 30px; /* Adjust font size as needed */
+  color: red; /* Adjust color as needed */
+  text-decoration: underline; /* Make it look clickable */
+  cursor: pointer;
+}
+
+/*# sourceMappingURL=game.css.184c4ef7bee4.map */
