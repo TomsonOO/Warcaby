@@ -3,11 +3,8 @@
     <div class="menu">
         
         <div class="d-grid gap-2 col-6 mx-auto mt-4">  
-            {% if user.is_authenticated %}
-                <a href="{% url 'snake' %}"><button type="button" class="btn-lg btn-outline-success">Play</button></a>
-            {% else %}
-                <a href="{% url 'logIn_required' %}"><button type="button" class="btn-lg btn-outline-success">Play</button></a>
-            {% endif %}
+                <a href="{% url 'game_play' %}"><button type="button" class="btn-lg btn-outline-success">Play</button></a>
+
         </div>
         <div class="d-grid gap-2 col-6 mx-auto mt-4">
             {% if user.pk %}

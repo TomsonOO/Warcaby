@@ -31,7 +31,7 @@ SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'cg#p$g+j9tax!#a3cup@1$8obt2_+&
 DEBUG = os.environ.get('DJANGO_DEBUG', '') != 'False'
 
 
-ALLOWED_HOSTS = ["wonsz.up.railway.app"]
+ALLOWED_HOSTS = ["wonsz.up.railway.app", "127.0.0.1"]
 CSRF_TRUSTED_ORIGINS = ['https://wonsz.up.railway.app']
 
 
@@ -54,6 +54,7 @@ INSTALLED_APPS = [
     'accounts.apps.AccountsConfig',
     'snake.apps.SnakeConfig',
     'menu.apps.MenuConfig',
+    'snake_game',
 ]
 
 MIDDLEWARE = [
@@ -137,7 +138,11 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 
 STATIC_URL = '/static/'
-STATICFILES_DIRS = [str(BASE_DIR.joinpath('static'))]
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'snake_game/static'),
+    str(BASE_DIR.joinpath('static')),
+]
+# STATICFILES_DIRS = [str(BASE_DIR.joinpath('static'))]
 STATIC_ROOT = str(BASE_DIR.joinpath('staticfiles'))
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
