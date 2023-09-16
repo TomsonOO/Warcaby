@@ -27,12 +27,21 @@ let high_score = 0;
 
 // Fetch the best score from the server
 fetch('/accounts/get-high-score/')
-    .then(response => response.json())
+    .then(response => {
+        if (response.status === 401) {
+            throw new Error('User not authenticated');
+        }
+        return response.json();
+    })
     .then(data => {
-        high_score = data.high_score;
-        document.getElementById("highScoreValue").textContent = high_score;
+        if (data.high_score !== undefined) {
+            document.getElementById("highScoreValue").textContent = data.high_score;
+        }
+    })
+    .catch(error => {
+        console.error('Error fetching high score:', error);
+        // Optionally, hide the high score display or show a message to the user
     });
-
 
 
 let d = "RIGHT";

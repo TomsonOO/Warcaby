@@ -27,8 +27,15 @@
         </div>
 
     <div class="score-display">Score: <span id="scoreValue">0</span></div>
-    <div class="score-display">High Score: <span id="highScoreValue">{{ best_score }}</span></div>  <!-- Add this line -->
-
+        {% if user.is_authenticated %}
+            <!-- Display the high score section -->
+            <div id="highScoreSection">
+                High Score: <span id="highScoreValue"></span>
+            </div>
+        {% else %}
+            <!-- Display a message prompting the user to log in -->
+            <div>Please log in to view the high score.</div>
+        {% endif %}
     <script>
         const snakeHeadSVGPath = "{{ snake_head_svg }}";
         const snakeBodySVGPath = "{{ snake_body_svg }}";

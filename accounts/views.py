@@ -18,10 +18,15 @@ class ChangeTheme(UpdateView):
     fields = ["age", "dark_theme"]
 
 
+
 def getHighScore(request):
     if request.user.is_authenticated:
-        return JsonResponse({'high_score': request.user.high_score})
-    return JsonResponse({'high_score': 0})
+        # Fetch the high score for the logged-in user
+        high_score = ...  # Fetch the high score from the database
+        return JsonResponse({'high_score': high_score})
+    else:
+        return JsonResponse({'error': 'User not authenticated'}, status=401)
+
 
 
 @csrf_exempt
