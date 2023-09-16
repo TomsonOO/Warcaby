@@ -1,12 +1,17 @@
 from django.shortcuts import render
 from django.templatetags.static import static
+from accounts.models import CustomUser  # Import the CustomUser model
 
 def game_view(request):
+    user_with_high_score = CustomUser.objects.order_by('-high_score').first()
+
     context = {
         'snake_head_svg': static('snake_game/images/snake_head.svg'),
         'snake_body_svg': static('snake_game/images/snake_body.svg'),
         'snake_tail_svg': static('snake_game/images/snake_tail.svg'),
         'apple_svg': static('snake_game/images/apple.svg'),
+        'high_score': user_with_high_score.high_score if user_with_high_score else 0,
+        # Add the best score to the context
     }
 
     return render(request, 'snake_game/game.html', context)

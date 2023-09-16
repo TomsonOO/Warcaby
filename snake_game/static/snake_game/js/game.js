@@ -7,6 +7,9 @@ const boxSize = canvas.width / 40;
 const moveDistance = boxSize;
 const canvasSize = 40;
 
+const csrfToken = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
+
+
 let isGameOver = false;
 let score = 0;
 
@@ -15,6 +18,22 @@ let snake = [
     { x: canvas.width / 2 - boxSize, y: canvas.height / 2 },
     { x: canvas.width / 2 - 2 * boxSize, y: canvas.height / 2 }
 ];
+
+//add best score mechanism that will load the best score from the database
+//and update it if the current score is higher than the best score
+//let bestScore = 0;
+
+let high_score = 0;
+
+// Fetch the best score from the server
+fetch('/accounts/get-high-score/')
+    .then(response => response.json())
+    .then(data => {
+        high_score = data.high_score;
+        document.getElementById("highScoreValue").textContent = high_score;
+    });
+
+
 
 let d = "RIGHT";
 document.addEventListener("keydown", direction);
@@ -222,6 +241,24 @@ document.getElementById("difficulty").addEventListener("change", function() {
 });
 
 function gameOverAnimation() {
+    if (score > high_score) {
+        // Update the high score in the database
+        fetch('/accounts/update-high-score/', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/x-www-form-urlencoded',
+                'X-CSRFToken': csrfToken  // Ensure you pass the CSRF token for Django
+            },
+            body: `score=${score}`
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (data.status === 'success') {
+                high_score = score;
+                document.getElementById("highScoreValue").textContent = high_score;
+            }
+        });
+    }
     isGameOver = true;
     let opacity = 0.0;
     const interval = setInterval(() => {
@@ -239,7 +276,6 @@ function gameOverAnimation() {
 
     document.getElementById("restartBtn").style.display = "block";
 }
-
 
 document.getElementById("restartBtn").addEventListener("click", function() {
     isGameOver = false;

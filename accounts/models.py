@@ -5,6 +5,7 @@ from django.urls import reverse
 class CustomUser(AbstractUser):
     age = models.PositiveIntegerField(null=True, blank=True)
     dark_theme = models.BooleanField(default=False)
+    high_score = models.PositiveIntegerField(default=0)
 
     def __str__(self):
         return self.username

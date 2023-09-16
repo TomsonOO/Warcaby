@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="csrf-token" content="{{ csrf_token }}">
 
     <title>Snake Game</title>
     <link rel="stylesheet" href="{% static 'snake_game/css/game.css' %}">
@@ -26,6 +27,7 @@
         </div>
 
     <div class="score-display">Score: <span id="scoreValue">0</span></div>
+    <div class="score-display">High Score: <span id="highScoreValue">{{ best_score }}</span></div>  <!-- Add this line -->
 
     <script>
         const snakeHeadSVGPath = "{{ snake_head_svg }}";
