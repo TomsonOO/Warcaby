@@ -12,12 +12,7 @@
 </head>
 <body>
     <h1 class="game-title">Snake</h1>
-    <p class="game-instructions">Use arrow keys to move the snake. Eat the food and avoid the walls!</p>
-    <select id="difficulty">
-        <option value="100">Easy</option>
-        <option value="75">Medium</option>
-        <option value="50">Hard</option>
-    </select>
+    <p class="game-instructions">Use arrow keys to move the snake. Eat the food and avoid mines!</p>
 
     <button id="startPauseBtn">Start Game</button>
 
@@ -36,14 +31,16 @@
             <!-- Display a message prompting the user to log in -->
             <div>Please log in to view the high score.</div>
         {% endif %}
-    <script>
-        const snakeHeadSVGPath = "{{ snake_head_svg }}";
-        const snakeBodySVGPath = "{{ snake_body_svg }}";
-        const snakeTailSVGPath = "{{ snake_tail_svg }}";
-        const snakeFoodSVGPath = "{{ apple_svg }}";
-    </script>
+        <script>
+            window.snakeHeadSVGPath = "{{ snake_head_svg }}";
+            window.snakeBodySVGPath = "{{ snake_body_svg }}";
+            window.snakeTailSVGPath = "{{ snake_tail_svg }}";
+            window.FoodSVGPath = "{{ food_svg }}";
+            window.mineSVGPath = "{{ mine_svg }}";
+        </script>
 
-    <script src="{% static 'snake_game/js/game.js' %}"></script>
+
+    <script type="module" src="{% static 'snake_game/js/game.js' %}"></script>
 
 </body>
 </html>

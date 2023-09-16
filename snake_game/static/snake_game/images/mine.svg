@@ -1,0 +1,13 @@
+<svg width="50" height="50" xmlns="http://www.w3.org/2000/svg">
+    <!-- Mine body -->
+    <circle cx="25" cy="25" r="20" fill="black" />
+    <!-- Mine spikes -->
+    <line x1="25" y1="5" x2="25" y2="0" stroke="#333" stroke-width="2"/>
+    <line x1="25" y1="45" x2="25" y2="50" stroke="#333" stroke-width="2"/>
+    <line x1="5" y1="25" x2="0" y2="25" stroke="#333" stroke-width="2"/>
+    <line x1="45" y1="25" x2="50" y2="25" stroke="#333" stroke-width="2"/>
+    <line x1="7" y1="7" x2="0" y2="0" stroke="#333" stroke-width="2"/>
+    <line x1="43" y1="7" x2="50" y2="0" stroke="#333" stroke-width="2"/>
+    <line x1="7" y1="43" x2="0" y2="50" stroke="#333" stroke-width="2"/>
+    <line x1="43" y1="43" x2="50" y2="50" stroke="#333" stroke-width="2"/>
+</svg>

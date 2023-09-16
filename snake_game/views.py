@@ -9,7 +9,8 @@ def game_view(request):
         'snake_head_svg': static('snake_game/images/snake_head.svg'),
         'snake_body_svg': static('snake_game/images/snake_body.svg'),
         'snake_tail_svg': static('snake_game/images/snake_tail.svg'),
-        'apple_svg': static('snake_game/images/apple.svg'),
+        'food_svg': static('snake_game/images/food.svg'),
+        'mine_svg': static('snake_game/images/mine.svg'),
         'high_score': user_with_high_score.high_score if user_with_high_score else 0,
         # Add the best score to the context
     }
