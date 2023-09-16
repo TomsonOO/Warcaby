@@ -8,12 +8,11 @@ class CustomUserAdmin(UserAdmin):
     model = CustomUser
     list_display = [
         "username",
-        "age",
         "is_staff",
         "dark_theme"
     ]
-    fieldsets = UserAdmin.fieldsets + ((None, {"fields": ("age", "dark_theme",)}),)
-    add_fieldsets = UserAdmin.add_fieldsets + ((None, {"fields": ("age", "dark_theme",)}),)
+    fieldsets = UserAdmin.fieldsets + ((None, {"fields": ("dark_theme",)}),)
+    add_fieldsets = UserAdmin.add_fieldsets + ((None, {"fields": ("dark_theme",)}),)
 
 
 admin.site.register(CustomUser, CustomUserAdmin)
