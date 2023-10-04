@@ -70,7 +70,13 @@ let foodImage = new Image();
 
 
 
-//  get a random color
+function preventArrowKeyScroll(event) {
+    if (isGameRunning && [37, 38, 39, 40].includes(event.keyCode)) {
+        event.preventDefault();
+    }
+}
+
+
 function getRandomColor() {
     const colors = ['yellow', 'blue', 'purple', 'red'];
     return colors[Math.floor(Math.random() * colors.length)];
@@ -336,3 +342,6 @@ document.getElementById("restartBtn").addEventListener("click", function() {
     this.style.display = "none";
     game = setInterval(draw, speed);
 });
+
+
+document.addEventListener("keydown", preventArrowKeyScroll);
