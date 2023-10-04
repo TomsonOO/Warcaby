@@ -185,10 +185,10 @@ function draw() {
         }
     }
 
-    if (score % 3 == 0 && score != 0 && !obstacleAdded) {
+    if (score % 2 == 0 && score != 0 && !obstacleAdded) {
         obstacles.push(generateObstacle());
         obstacleAdded = true;
-    } else if (score % 3 != 0) {
+    } else if (score % 2 != 0) {
         obstacleAdded = false;
     }
 
@@ -342,11 +342,26 @@ document.getElementById("restartBtn").addEventListener("click", function() {
     game = setInterval(draw, speed);
 });
 
+const errorMsg = document.getElementById("errorMsg");
+
+function checkViewportSize() {
+    const viewportWidth = window.innerWidth || document.documentElement.clientWidth;
+    const viewportHeight = window.innerHeight || document.documentElement.clientHeight;
+
+    if (canvas.width > viewportWidth || canvas.height > viewportHeight) {
+        return false;
+    }
+    return true;
+}
+
 const startBtn = document.getElementById("startBtn");
 startBtn.addEventListener("click", function() {
-    // Assuming you have a function called `startGame` that initializes and starts the game
-    startGame();
-    startBtn.style.display = "none"; // Hide the start button after the game has started
+    if (checkViewportSize()) {
+        startGame();
+        startBtn.style.display = "none"; // Hide the start button after the game has started
+    } else {
+        errorMsg.style.display = "block"; // Display the error message
+    }
 });
 
 function startGame() {

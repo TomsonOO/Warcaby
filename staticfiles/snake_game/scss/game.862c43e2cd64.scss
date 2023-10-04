@@ -15,29 +15,6 @@ body {
     gap: 2rem;
 }
 
-.score-leaderboard-section {
-    display: flex;
-    flex-direction: column; // Stack children vertically
-    gap: 1rem; // Adjust this value as needed
-}
-
-.score-section {
-    text-align: center;
-    margin-bottom: 1rem; // Adjust this value as needed
-
-    .score-display, #highScoreSection {
-        font-size: 2em; // Adjust this value to make the text bigger or smaller
-        font-weight: bold; // Makes the text bold
-        color: $snake-head-color; // Using the snake head color for emphasis
-        margin: 0.5rem 0; // Adds some spacing above and below each score
-        padding: 0.5rem; // Adds some padding around each score
-        background-color: rgba(255, 255, 255, 0.1); // Adds a subtle background for emphasis
-        border-radius: 10px; // Rounds the corners
-    }
-}
-
-
-
 .canvas-container {
     position: relative;
     background-color: #88ad80;
@@ -80,7 +57,7 @@ body {
 }
 
 .text-end{
-    height: 60px;
+    height: 100px;
 
 }
 
@@ -175,3 +152,4 @@ button {
         background-color: darken(#28a745, 10%);
     }
 }
+

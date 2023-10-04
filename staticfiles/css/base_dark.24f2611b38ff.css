@@ -1,6 +1,6 @@
 body {
   text-align: center;
-  background-color: rgb(136, 173, 128);
+  background-color: #3f6237;
 }
 
 .text-end {
@@ -17,10 +17,12 @@ body {
   text-align: center;
   font-size: 72px;
 }
+
 .logo a {
   text-decoration: none;
-  color: rgb(48, 98, 18);
+  color: #306212;
 }
+
 .logo h1 {
   font-weight: 800;
 }
@@ -29,15 +31,19 @@ body {
   width: 100%;
   font-size: 64px;
   padding: 20px;
-  background-color: rgb(117, 156, 107);
+  background-color: #759c6b;
   display: table-column;
   font-weight: 400;
 }
 
 .form-control {
   margin-left: auto;
-  margin-right: auto;
-  text-align: center;
+}
+
+.form-control .alert {
+  background-color: #759c6b;
+  color: #306212;
+  font-size: 36px;
 }
 
 .menu a {
@@ -47,14 +53,14 @@ body {
   width: 100%;
 }
 
-.settings h1 {
-  color: rgb(20, 41, 15);
+.form-control .menu a {
+  text-decoration: none;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
 }
 
-.alert-secondary {
-  background-color: rgb(117, 156, 107);
-  color: rgb(48, 98, 18);
-  font-size: 36px;
+.form-control .settings h1 {
+  color: #14290f;
 }
-
-/*# sourceMappingURL=base.css.map */
+/*# sourceMappingURL=base_dark.css.35a76d3c6a1b.map */

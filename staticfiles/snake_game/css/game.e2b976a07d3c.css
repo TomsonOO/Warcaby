@@ -10,26 +10,6 @@ body {
   gap: 2rem;
 }
 
-.score-leaderboard-section {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-.score-section {
-  text-align: center;
-  margin-bottom: 1rem;
-}
-.score-section .score-display, .score-section #highScoreSection {
-  font-size: 2em;
-  font-weight: bold;
-  color: #28a745;
-  margin: 0.5rem 0;
-  padding: 0.5rem;
-  background-color: rgba(255, 255, 255, 0.1);
-  border-radius: 10px;
-}
-
 .canvas-container {
   position: relative;
   background-color: #88ad80;
@@ -71,7 +51,7 @@ body {
 }
 
 .text-end {
-  height: 60px;
+  height: 100px;
 }
 
 button {
@@ -163,4 +143,4 @@ button:hover {
   background-color: #1e7e34;
 }
 
-/*# sourceMappingURL=game.css.map */
+/*# sourceMappingURL=game.css.b4d2d27a9222.map */

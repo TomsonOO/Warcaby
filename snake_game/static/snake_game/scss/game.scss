@@ -4,7 +4,6 @@ $snake-head-color: #28a745;
 $food-color: #dc3545;
 
 body {
-    font-family: Arial, sans-serif;
     background-color: $background-color;
     text-align: center;
 }
@@ -15,6 +14,29 @@ body {
     align-items: center;
     gap: 2rem;
 }
+
+.score-leaderboard-section {
+    display: flex;
+    flex-direction: column; // Stack children vertically
+    gap: 1rem; // Adjust this value as needed
+}
+
+.score-section {
+    text-align: center;
+    margin-bottom: 1rem; // Adjust this value as needed
+
+    .score-display, #highScoreSection {
+        font-size: 2em; // Adjust this value to make the text bigger or smaller
+        font-weight: bold; // Makes the text bold
+        color: $snake-head-color; // Using the snake head color for emphasis
+        margin: 0.5rem 0; // Adds some spacing above and below each score
+        padding: 0.5rem; // Adds some padding around each score
+        background-color: rgba(255, 255, 255, 0.1); // Adds a subtle background for emphasis
+        border-radius: 10px; // Rounds the corners
+    }
+}
+
+
 
 .canvas-container {
     position: relative;
@@ -28,6 +50,38 @@ body {
     height: 40vw;
     max-width: 800px;
     max-height: 800px;
+}
+
+.homeNav{
+    text-align: right;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.header-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.logo{
+    a{
+        text-decoration: none;
+        color: rgb(48, 98, 18);
+    }
+    h1{
+        font-weight: 800;
+    }
+    text-align: center;
+    font-size: 72px;
+
+}
+
+.text-end{
+    height: 60px;
+
 }
 
 button {
@@ -121,4 +175,3 @@ button {
         background-color: darken(#28a745, 10%);
     }
 }
-

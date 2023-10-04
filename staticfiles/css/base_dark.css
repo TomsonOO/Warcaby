@@ -46,6 +46,13 @@ body {
   font-size: 36px;
 }
 
+.menu a {
+  text-decoration: none;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
 .form-control .menu a {
   text-decoration: none;
   margin-left: auto;
