@@ -39,10 +39,11 @@
   }
   
   .form-control{
-      margin-left: auto;
-      margin-right: auto;    
-      text-align: center;
-  }
+      margin-left: auto;.alert{ 
+        background-color: rgb(117, 156, 107);
+        color: rgb(48, 98, 18);
+        font-size: 36px;
+    }
   
   .menu{
       a{
@@ -53,9 +54,9 @@
       }
   }
 
-.settings {
-    h1{
-        color:rgb(20, 41, 15)
-    }      
+    .settings{
+        h1{
+            color:rgb(20, 41, 15);
+        }      
+    }
 }
-  

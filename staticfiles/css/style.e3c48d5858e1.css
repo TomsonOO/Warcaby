@@ -1,0 +1,126 @@
+body
+{
+	background-color: black;
+	font-family: 'MuseoModerno', cursive;
+	color: gray;
+}
+#container
+{
+	width: 1000px;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+#logo
+{
+	color: #064500;
+	margin-top: 40px;
+	margin-bottom: 20px;
+	font-size: 96px;
+	font-weight:700;
+	
+}
+#game
+{
+	text-align: center;
+	float: left;
+	min-height: 623px;
+	min-width: 623px;
+	border: 1px solid gray;
+	padding: 0px;
+	margin: 0px;
+}
+#score
+{
+	float: left;
+	min-height: 500px;
+	width: 248px;
+	border: 1px solid gray;
+	margin-left:50px;
+	color: #064500;
+	font-size: 54px;
+}
+#current
+{
+	font-size: 36px;
+	color: gray;
+	min-height:60px;
+}
+#legend
+{
+	font-size: 36px;
+	color: gray;
+	margin-top:50px;
+}
+#timer
+{
+	font-size: 36px;
+	color: #064500;
+}
+#time
+{
+	font-size: 36px;
+	min-height:50px;
+	color: gray;
+}
+#footer
+{
+	min-height:100px;
+	text-align:right;
+	padding-right:75px;
+}
+.case
+{
+	float: left;
+	width: 23px;
+	height: 20px;
+	border: 1px solid black;
+	color:#E80000;
+	padding-top:3px;
+}
+h1
+{
+	font-size:54px;
+}
+h2
+{
+	font-size:36px;
+}
+#button
+{
+	font-size:36px;
+	color:#08C915;
+}
+#button:hover
+{
+	font-size:36px;
+	color:#E80000;
+	cursor:pointer;
+}
+#button2
+{
+	font-size:72px;
+	color:#08C915;
+}
+#button2:hover
+{
+	color:#E80000;
+	cursor:pointer;
+}
+.button3
+{
+	font-size:36px;
+	color:#064500;
+}
+.button3:hover
+{
+	color:#043000;
+	cursor:pointer;
+}
+#ready
+{
+	padding-top:150px;
+	font-size:200px;
+	color:#064500;
+	text-align:center;
+}

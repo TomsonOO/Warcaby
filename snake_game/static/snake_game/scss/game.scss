@@ -68,7 +68,7 @@ button {
 }
 
 .leaderboard h2 {
-    color: $snake-head-color;
+    color: black;
     font-size: 1.5em;
     margin-bottom: 1rem;
 }
@@ -82,3 +82,43 @@ button {
     padding: 0.5rem 1rem;
     border: 1px solid #000;
 }
+
+#restartBtn {
+    padding: 10px 20px;  // Padding around the text
+    background-color: #28a745;  // Green background similar to the snake head color
+    color: white;  // White text color
+    border: none;  // No border
+    border-radius: 25px;  // Rounded corners
+    cursor: pointer;  // Hand cursor on hover
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  // Subtle shadow for depth
+    transition: background-color 0.3s;  // Smooth transition for hover effects
+    font-family: 'Patrick Hand', cursive;  // The font you chose earlier
+    font-size: 1.2em;  // Adjust font size as needed
+    position: absolute;  // Absolute positioning
+    bottom: 10px;  // 10px from the bottom of the canvas
+    left: 50%;  // Centered horizontally
+    transform: translateX(-50%);  // Adjust for centering
+
+    &:hover {
+        background-color: darken(#28a745, 10%);  // Darken the background on hover
+    }
+}
+
+#startBtn {
+    position: absolute;
+    bottom: 10px; // Adjust as needed to position it at the bottom of the canvas
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+    &:hover {
+        background-color: darken(#28a745, 10%);
+    }
+}
+

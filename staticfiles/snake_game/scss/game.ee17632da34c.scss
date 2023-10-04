@@ -1,0 +1,96 @@
+$background-color: #3f6237;
+$snake-color: green;
+$snake-head-color: #28a745;
+$food-color: #dc3545;
+
+body {
+    font-family: 'Press Start 2P', cursive;
+    background-color: $background-color;
+    text-align: center;
+}
+
+.game-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.canvas-container {
+    position: relative;
+    background-color: #88ad80;
+    border: 2px solid #000;
+    display: inline-block;
+}
+
+#gameCanvas {
+    width: 40vw;
+    height: 40vw;
+    max-width: 800px;
+    max-height: 800px;
+}
+
+button {
+    padding: 10px 15px;
+    background-color: $snake-head-color;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+    &:hover {
+        background-color: darken($snake-head-color, 10%);
+    }
+}
+
+.game-title {
+    font-size: 2.5em;
+    color: $snake-head-color;
+    margin-bottom: 20px;
+}
+
+.game-instructions {
+    font-size: 1.2em;
+    margin-bottom: 15px;
+}
+
+.score-display {
+    font-size: 1.5em;
+    margin-top: 15px;
+}
+
+.leaderboard {
+    width: 30vw;
+    background-color: #88ad80;
+    border: 2px solid #000;
+    padding: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.leaderboard h2 {
+    color: $snake-head-color;
+    font-size: 1.5em;
+    margin-bottom: 1rem;
+}
+
+.leaderboard table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.leaderboard th, .leaderboard td {
+    padding: 0.5rem 1rem;
+    border: 1px solid #000;
+}
+
+#restartBtn {
+    position: absolute;
+    top: 60%; // Adjust to position it lower
+    left: 50%; // Center it horizontally
+    transform: translate(-50%, -50%); // Center it both horizontally and vertically
+    font-size: 30px; // Adjust font size as needed
+    color: red; // Adjust color as needed
+    cursor: pointer;
+    z-index: 10; // Ensure it's above other elements
+    text-decoration: none; // Remove the underline
+}

@@ -38,18 +38,22 @@ body {
 
 .form-control {
   margin-left: auto;
-  margin-right: auto;
-  text-align: center;
 }
 
-.menu a {
+.form-control .alert {
+  background-color: #759c6b;
+  color: #306212;
+  font-size: 36px;
+}
+
+.form-control .menu a {
   text-decoration: none;
   margin-left: auto;
   margin-right: auto;
   width: 100%;
 }
 
-.settings h1 {
+.form-control .settings h1 {
   color: #14290f;
 }
 /*# sourceMappingURL=base_dark.css.map */
