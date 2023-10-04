@@ -1,6 +1,6 @@
 body {
   text-align: center;
-  background-color: #88ad80;
+  background-color: rgb(136, 173, 128);
 }
 
 .text-end {
@@ -17,12 +17,10 @@ body {
   text-align: center;
   font-size: 72px;
 }
-
 .logo a {
   text-decoration: none;
-  color: #306212;
+  color: rgb(48, 98, 18);
 }
-
 .logo h1 {
   font-weight: 800;
 }
@@ -31,7 +29,7 @@ body {
   width: 100%;
   font-size: 64px;
   padding: 20px;
-  background-color: #759c6b;
+  background-color: rgb(117, 156, 107);
   display: table-column;
   font-weight: 400;
 }
@@ -50,18 +48,13 @@ body {
 }
 
 .settings h1 {
-  color: #14290f;
+  color: rgb(20, 41, 15);
 }
 
 .alert-secondary {
-  background-color: #759c6b;
-  color: #306212;
+  background-color: rgb(117, 156, 107);
+  color: rgb(48, 98, 18);
   font-size: 36px;
 }
 
-.custom-width {
-    width: 70%;  /* or any other percentage or fixed width you prefer */
-    max-width: 600px;  /* optional, to set a maximum width */
-    margin: 0 auto;  /* to center the input fields if they are block-level elements */
-}
 /*# sourceMappingURL=base.css.map */

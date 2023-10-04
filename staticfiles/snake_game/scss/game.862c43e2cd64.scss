@@ -1,0 +1,155 @@
+$background-color: #3f6237;
+$snake-color: green;
+$snake-head-color: #28a745;
+$food-color: #dc3545;
+
+body {
+    background-color: $background-color;
+    text-align: center;
+}
+
+.game-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.canvas-container {
+    position: relative;
+    background-color: #88ad80;
+    border: 2px solid #000;
+    display: inline-block;
+}
+
+#gameCanvas {
+    width: 40vw;
+    height: 40vw;
+    max-width: 800px;
+    max-height: 800px;
+}
+
+.homeNav{
+    text-align: right;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.header-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.logo{
+    a{
+        text-decoration: none;
+        color: rgb(48, 98, 18);
+    }
+    h1{
+        font-weight: 800;
+    }
+    text-align: center;
+    font-size: 72px;
+
+}
+
+.text-end{
+    height: 100px;
+
+}
+
+button {
+    padding: 10px 15px;
+    background-color: $snake-head-color;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+    &:hover {
+        background-color: darken($snake-head-color, 10%);
+    }
+}
+
+.game-title {
+    font-size: 2.5em;
+    color: $snake-head-color;
+    margin-bottom: 20px;
+}
+
+.game-instructions {
+    font-size: 1.2em;
+    margin-bottom: 15px;
+}
+
+.score-display {
+    font-size: 1.5em;
+    margin-top: 15px;
+}
+
+.leaderboard {
+    width: 30vw;
+    background-color: #88ad80;
+    border: 2px solid #000;
+    padding: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.leaderboard h2 {
+    color: black;
+    font-size: 1.5em;
+    margin-bottom: 1rem;
+}
+
+.leaderboard table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.leaderboard th, .leaderboard td {
+    padding: 0.5rem 1rem;
+    border: 1px solid #000;
+}
+
+#restartBtn {
+    padding: 10px 20px;  // Padding around the text
+    background-color: #28a745;  // Green background similar to the snake head color
+    color: white;  // White text color
+    border: none;  // No border
+    border-radius: 25px;  // Rounded corners
+    cursor: pointer;  // Hand cursor on hover
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);  // Subtle shadow for depth
+    transition: background-color 0.3s;  // Smooth transition for hover effects
+    font-family: 'Patrick Hand', cursive;  // The font you chose earlier
+    font-size: 1.2em;  // Adjust font size as needed
+    position: absolute;  // Absolute positioning
+    bottom: 10px;  // 10px from the bottom of the canvas
+    left: 50%;  // Centered horizontally
+    transform: translateX(-50%);  // Adjust for centering
+
+    &:hover {
+        background-color: darken(#28a745, 10%);  // Darken the background on hover
+    }
+}
+
+#startBtn {
+    position: absolute;
+    bottom: 10px; // Adjust as needed to position it at the bottom of the canvas
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+
+    &:hover {
+        background-color: darken(#28a745, 10%);
+    }
+}
+

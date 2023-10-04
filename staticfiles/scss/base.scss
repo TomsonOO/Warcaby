@@ -3,9 +3,8 @@ body {
     background-color: rgb(136, 173, 128);
 }
 
-.text-end{  
+.text-end{
     height: 100px;
-    
 }
 
 .homeNav{
@@ -14,7 +13,7 @@ body {
     margin-right: auto;
 }
 
-.logo{ 
+.logo{
     a{
         text-decoration: none;
         color: rgb(48, 98, 18);
@@ -40,7 +39,7 @@ body {
 
 .form-control{
     margin-left: auto;
-    margin-right: auto;    
+    margin-right: auto;
     text-align: center;
 }
 
@@ -57,4 +56,10 @@ body {
     h1{
         color:rgb(20, 41, 15)
     }
+}
+
+.alert-secondary{
+    background-color: rgb(117, 156, 107);
+    color: rgb(48, 98, 18);
+    font-size: 36px;
 }
