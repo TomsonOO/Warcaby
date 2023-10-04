@@ -16,29 +16,52 @@
 
     <button id="startPauseBtn">Start Game</button>
 
+    <div class="game-container">
+        <!-- Game Canvas -->
         <div class="canvas-container">
             <label id="restartBtn" style="cursor: pointer; display: none;">Restart</label>
             <canvas id="gameCanvas" width="400" height="400"></canvas>
         </div>
 
-    <div class="score-display">Score: <span id="scoreValue">0</span></div>
-        {% if user.is_authenticated %}
-            <!-- Display the high score section -->
-            <div id="highScoreSection">
-                High Score: <span id="highScoreValue"></span>
-            </div>
-        {% else %}
-            <!-- Display a message prompting the user to log in -->
-            <div>Please log in to view the high score.</div>
-        {% endif %}
-        <script>
-            window.snakeHeadSVGPath = "{{ snake_head_svg }}";
-            window.snakeBodySVGPath = "{{ snake_body_svg }}";
-            window.snakeTailSVGPath = "{{ snake_tail_svg }}";
-            window.FoodSVGPath = "{{ food_svg }}";
-            window.mineSVGPath = "{{ mine_svg }}";
-        </script>
+        <!-- Leaderboard -->
+        <div class="leaderboard">
+            <h2>Top 10 Scores</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nickname</th>
+                        <th>Score</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for user in top_users %}
+                    <tr>
+                        <td>{{ user.username }}</td>
+                        <td>{{ user.high_score }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
 
+    <div class="score-display">Score: <span id="scoreValue">0</span></div>
+    {% if user.is_authenticated %}
+        <!-- Display the high score section -->
+        <div id="highScoreSection">
+            High Score: <span id="highScoreValue"></span>
+        </div>
+    {% else %}
+        <!-- Display a message prompting the user to log in -->
+        <div>Please log in to view the high score.</div>
+    {% endif %}
+    <script>
+        window.snakeHeadSVGPath = "{{ snake_head_svg }}";
+        window.snakeBodySVGPath = "{{ snake_body_svg }}";
+        window.snakeTailSVGPath = "{{ snake_tail_svg }}";
+        window.FoodSVGPath = "{{ food_svg }}";
+        window.mineSVGPath = "{{ mine_svg }}";
+    </script>
 
     <script type="module" src="{% static 'snake_game/js/game.js' %}"></script>
 
