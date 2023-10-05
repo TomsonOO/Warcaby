@@ -135,6 +135,7 @@ button:hover {
   cursor: pointer;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: background-color 0.3s;
+  font-family: "Patrick Hand", cursive;
   font-size: 1.2em;
   position: absolute;
   bottom: 10px;
@@ -162,4 +163,4 @@ button:hover {
   background-color: #1e7e34;
 }
 
-/*# sourceMappingURL=game.css.map */
+/*# sourceMappingURL=game.css.184c4ef7bee4.map */
