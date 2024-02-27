@@ -1,30 +1,26 @@
-# Use a specific Python runtime as the base image
-FROM python:3.8.12-slim
+FROM python:3.10-alpine
 
-# Set environment variables
-ENV PYTHONDONTWRITEBYTECODE 1
-ENV PYTHONUNBUFFERED 1
-
-# Set the working directory in the container
 WORKDIR /app
 
-# Install system dependencies
-RUN apt-get update && apt-get install -y --no-install-recommends \
-    gcc \
-    libpq-dev \
-    && apt-get clean \
-    && rm -rf /var/lib/apt/lists/*
+ENV PYTHONDONTWRITEBYTECODE 1
+ENV PYTHONUNBUFFERED 1
+ENV DEBUG 0
 
-# Install Python dependencies
-COPY requirements.txt /app/
-RUN pip install --upgrade pip && pip install -r requirements.txt
+RUN apk update \
+    && apk add --virtual build-essential gcc python3-dev musl-dev \
+    && apk add postgresql-dev \
+    && pip install psycopg2
 
-# Copy the current directory contents into the container at /app
-COPY . /app/
+COPY ./requirements.txt .
+RUN pip install -r requirements.txt
 
-# Create a non-root user and switch to it
-RUN adduser --disabled-password --gecos '' appuser && chown -R appuser /app
-USER appuser
+COPY . .
 
-# Specify the command to run on container start
-CMD ["gunicorn", "Snake.wsgi:application", "--bind", "0.0.0.0:8000"]
+RUN python manage.py collectstatic --noinput
+
+
+RUN adduser -D myuser
+USER myuser
+
+CMD gunicorn Snake.wsgi:application --bind 0.0.0.0:$PORT
+

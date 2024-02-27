@@ -1,0 +1,61 @@
+body {
+  text-align: center;
+  background-color: rgb(63, 98, 55);
+}
+
+.text-end {
+  height: 100px;
+}
+
+.homeNav {
+  text-align: right;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.logo {
+  text-align: center;
+  font-size: 72px;
+}
+.logo a {
+  text-decoration: none;
+  color: rgb(48, 98, 18);
+}
+.logo h1 {
+  font-weight: 800;
+}
+
+.btn-lg, btn-outline-success {
+  width: 100%;
+  font-size: 64px;
+  padding: 20px;
+  background-color: rgb(117, 156, 107);
+  display: table-column;
+  font-weight: 400;
+}
+
+.form-control {
+  margin-left: auto;
+}
+.form-control .alert {
+  background-color: rgb(117, 156, 107);
+  color: rgb(48, 98, 18);
+  font-size: 36px;
+}
+.form-control .menu a {
+  text-decoration: none;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+.form-control .settings h1 {
+  color: rgb(20, 41, 15);
+}
+
+.custom-width {
+  width: 70%; /* or any other percentage or fixed width you prefer */
+  max-width: 600px; /* optional, to set a maximum width */
+  margin: 0 auto; /* to center the input fields if they are block-level elements */
+}
+
+/*# sourceMappingURL=base_dark.css.35a76d3c6a1b.map */
