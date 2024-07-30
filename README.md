@@ -1,6 +1,6 @@
 # Snake Game
 
-**Demo**: [Play Snake Game Here](https://wonsz-693e2c800008.herokuapp.com/)
+**Demo**: [Play Snake Game Here](https://wonsz-693e2c800008.herokuapp.com/) *(Initial loading may take 5-10 seconds)*
 
 Enjoy the classic Snake Game brought to life on the web. Built with Django, which powers both the frontend and backend, this game offers a seamless experience as you navigate the snake to consume food while avoiding obstacles.
 
